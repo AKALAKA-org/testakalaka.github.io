@@ -11,7 +11,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="main-navbar">
-    <ul class="navbar-nav ml-right">
+    <ul class="navbar-nav" style="margin-left: auto!important;">
       {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
@@ -47,7 +47,7 @@
   {% endif %}
 
   {% if site.navbar-right %}
-      <ul class="navbar-nav ml-right">
+      <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-right -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
@@ -62,7 +62,7 @@
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+            <a class="nav-link btn btn-primary" href="{{ link[1] | relative_url }}" role="button">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
