@@ -14,7 +14,7 @@
     <ul class="navbar-nav" style="margin-left: auto!important;">
       {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
-          <li class="nav-item dropdown">
+          <li class="dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
@@ -25,13 +25,13 @@
             </div>
           </li>
         {% else %}
-          <li class="nav-item">
+          <li>
             <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
       {% if site.post_search %}
-        <li class="nav-item">
+        <li>
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
             <span id="nav-search-icon" class="fa fa-search"></span>
             <span id="nav-search-text">Search</span>
@@ -50,7 +50,7 @@
       <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-right -%}
         {%- if link[1].first %}
-          <li class="nav-item dropdown">
+          <li class="dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
@@ -61,13 +61,13 @@
             </div>
           </li>
         {% else %}
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary btn-lg active" href="{{ link[1] | relative_url }}" role="button">{{ link[0] }}</a>
+          <li>
+            <a class="nav-link btn btn-lg active" href="{{ link[1] | relative_url }}" style="background-color: #348c00; border-color: #6c757d; border-color: #348c00;" role="button">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
       {% if site.post_search %}
-        <li class="nav-item">
+        <li>
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
             <span id="nav-search-icon" class="fa fa-search"></span>
             <span id="nav-search-text">Search</span>
