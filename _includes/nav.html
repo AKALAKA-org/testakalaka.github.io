@@ -39,7 +39,6 @@
         </li>
       {%- endif -%}
     </ul>
-  </div>
 
   {% if site.navbar-extra %}
     {% for file in site.navbar-extra %}
@@ -48,6 +47,7 @@
   {% endif %}
 
   {% if site.navbar-right %}
+      <ul class="navbar-nav ml-right">
       {%- for link in site.navbar-right -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
