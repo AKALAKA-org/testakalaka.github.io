@@ -21,7 +21,7 @@ navbar-links:
     - Therapists & Attorneys: "https://akalaka.org"
   About: "about"
   Pricing: "join"
-  Taking Care of Siblings: "blog"
+  Blog: "blog"
   #Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
     #- Learn markdown: "https://www.markdowntutorial.com/"
